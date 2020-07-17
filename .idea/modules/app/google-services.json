@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "973968831723",
+    "firebase_url": "https://amsmobile-v3.firebaseio.com",
+    "project_id": "amsmobile-v3",
+    "storage_bucket": "amsmobile-v3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973968831723:android:df760bea89ff702ea67aae",
+        "android_client_info": {
+          "package_name": "com.elevenx.ams_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973968831723-ij2u22iur6drg5blne257ophpdrie9a9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elevenx.ams_mobile",
+            "certificate_hash": "9492ecfc1a3ce16c48e7351fc144bc956720278c"
+          }
+        },
+        {
+          "client_id": "973968831723-sqabe1vnpa4drbbqdesq7526udnh1o53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzsZPqnhE5cb83Rnfz0lLskKvFnSrYoHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973968831723-sqabe1vnpa4drbbqdesq7526udnh1o53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
