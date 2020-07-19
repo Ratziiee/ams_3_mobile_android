@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter Mobile Number"
             android:inputType="number"
-            android:text="+919717637460"
+            android:text=""
             android:maxLength="13"
             android:id="@+id/et_mobile"/>
 

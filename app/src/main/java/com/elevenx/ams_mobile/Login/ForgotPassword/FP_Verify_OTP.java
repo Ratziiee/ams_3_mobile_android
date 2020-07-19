@@ -1,4 +1,4 @@
-package com.elevenx.ams_mobile.Login.RegisterUser;
+package com.elevenx.ams_mobile.Login.ForgotPassword;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +12,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.elevenx.ams_mobile.Login.RegisterUser.Set_Password;
+import com.elevenx.ams_mobile.Login.RegisterUser.Verify_OTP;
 import com.elevenx.ams_mobile.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,7 +27,8 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class Verify_OTP extends AppCompatActivity {
+public class FP_Verify_OTP extends AppCompatActivity {
+
     String Mobile_Number = "",COUNTRY_CODE="";
 
 
@@ -40,13 +42,11 @@ public class Verify_OTP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verify_otp);
+        setContentView(R.layout.activity_f_p__verify__o_t_p);
 
         initviews();
         clickListner();
         onCreateThings();
-
-
     }
 
     private void initviews()
@@ -116,7 +116,7 @@ public class Verify_OTP extends AppCompatActivity {
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(Verify_OTP.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(FP_Verify_OTP.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -138,12 +138,12 @@ public class Verify_OTP extends AppCompatActivity {
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(Verify_OTP.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(FP_Verify_OTP.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
-                            Intent intent = new Intent(Verify_OTP.this, Set_Password.class);
+                            Intent intent = new Intent(FP_Verify_OTP.this, FP_SetPassword.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             intent.putExtra("mobile_number",Mobile_Number);
                             intent.putExtra("country_code",COUNTRY_CODE);
@@ -160,7 +160,7 @@ public class Verify_OTP extends AppCompatActivity {
                                 message = "Invalid code entered...";
                             }
 
-                            Toast.makeText(Verify_OTP.this, message, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(FP_Verify_OTP.this, message, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

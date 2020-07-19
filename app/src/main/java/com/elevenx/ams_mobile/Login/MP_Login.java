@@ -2,11 +2,13 @@ package com.elevenx.ams_mobile.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.elevenx.ams_mobile.AfterLogin.MP_After_Login;
 import com.elevenx.ams_mobile.Login.Login.Verify_Mobile_no;
 import com.elevenx.ams_mobile.Login.RegisterUser.Register_User;
 import com.elevenx.ams_mobile.R;
@@ -23,12 +25,28 @@ public class MP_Login extends AppCompatActivity {
 
         initViewss();
         clickListners();
+        onCreateThing();
     }
 
     private void initViewss()
     {
         btn_register = findViewById(R.id.btn_register);
         btn_signIn = findViewById(R.id.btn_signIn);
+    }
+
+    private void onCreateThing()
+    {
+        if(checkForLoggedIn())
+        {
+            startActivity(Utils.Intent(this, MP_After_Login.class));
+        }
+    }
+
+    private Boolean checkForLoggedIn()
+    {
+        SharedPreferences sp = getSharedPreferences("PROFILE", MODE_PRIVATE);
+
+        return sp.getBoolean("isLoggedIn", false);
     }
 
     private void clickListners()

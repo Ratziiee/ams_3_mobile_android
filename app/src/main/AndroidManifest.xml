@@ -13,16 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile.Edit_Profile"/>
+        <activity android:name=".Login.ForgotPassword.FP_SetPassword"></activity>
+        <activity android:name=".Login.ForgotPassword.FP_Verify_OTP" />
+        <activity android:name=".Login.ForgotPassword.MP_ForgotPassword" />
+        <activity android:name=".Profile.Edit_Profile" />
         <activity android:name=".AfterLogin.JoinOrganization.Join_Organization" />
         <activity android:name=".AfterLogin.CreateOrganization.Create_Organization" />
-        <activity android:name=".Profile.View_Profile">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
+        <activity android:name=".Profile.View_Profile" />
         <activity android:name=".AfterLogin.MP_After_Login" />
         <activity android:name=".Login.Login.Login" />
         <activity android:name=".Login.RegisterUser.Set_Password" />

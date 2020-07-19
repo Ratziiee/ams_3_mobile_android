@@ -17,7 +17,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Password"
+            android:text="password@123"
             android:id="@+id/et_pwd"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:id="@+id/tv_forgotPassword"
+            android:textAlignment="textEnd"/>
 
 
         <Button
